@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<!-- HEADER -->
+<header class="px-10 shadow-lg">
+    <div class="md:h-[96px] lg:h-[96px] sm:h-[120px] flex items-center py-4 px-10">
+        <img class="w-[64px] h-[64px] gap-4" src="./images/logo.png"/>
+        <div class="flex flex-row gap-8 justify-end w-full">
+            <nav class="font-bold text-md self-center invisible sm:invisible md:visible lg:visible">
+                <ul>
+                    <li class="inline">
+                        <a class="ml-2" href="/home">Home</a>
+                    </li>
+                    <li class="inline">
+                        <a class="ml-2" href="/about-us">About Us</a>
+                    </li>
+                    <li class="inline">
+                        <a class="ml-2" href="/our-features">Our Features</a>
+                    </li>
+                    <li class="inline">
+                        <a class="ml-2" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex self-center sm:visible md:invisible lg:invisible md:w-0 lg:w-0">
+                <button class="relative group">
+                  <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
+                    <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
+                      <div class="bg-black h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:translate-x-10"></div>
+                      <div class="bg-black h-[2px] w-7 rounded transform transition-all duration-300 group-focus:translate-x-10 delay-75"></div>
+                      <div class="bg-black h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:translate-x-10 delay-150"></div>
+          
+                      <div class="absolute items-center justify-between transform transition-all duration-500 top-2.5 -translate-x-10 group-focus:translate-x-0 flex w-0 group-focus:w-12">
+                        <div class="absolute bg-black h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 group-focus:rotate-45"></div>
+                        <div class="absolute bg-black h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 group-focus:-rotate-45"></div>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+            </div>
+        
+            <div class="font-medium text-base gap-4">
+                <a href="/sign-up">
+                    <button class="bg-dark-purple border-b-2 border-dark-purple hover:bg-light-purple hover:border-light-purple text-white py-2 px-4 rounded">
+                        Sign up
+                    </button>
+                </a>
+                
+                <a href="/log-in">
+                    <button class="bg-transparent border-b-2 border-dark-purple text-dark-purple hover:border-light-purple hover:text-light-purple py-2 px-4">
+                        Log in
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- BODY -->
+<body>
+
+    <!-- CONTAINER 1 -->
+    <div class="p-10 h-[306px]">
+        <span>
+            <a class="ml-2 text-grey font-normal font-md" href="/home">Home /</a>
+            <a class="ml-2 font-normal font-md" href="/store">Store</a>
+        </span>
+        <h1 class="text-title1 font-bold">Welcome to our beautiful Store</h1>
+        <p class="font-medium font-base mt-5 gap-2.5">A new adventure for perfect design. Discover our design system based on 8px grid and scaling components.</p>
+        <a href="/products">
+            <button class="bg-dark-purple border-b-2 border-adrk-purple hover:bg-light-purple hover:border-light-purple text-white font-medium font-base py-2 px-4 mt-5 rounded">
+                Explore products
+            </button>
+        </a>
+
+        <div class="grid grid-cols-2 mt-10">
+            <div class="flex items-center">
+                <label for="search" class="relative">
+                    <input type="text" placeholder="Search a product ..." class="border font-medium font-base border-lightgrey rounded px-4 py-1 pr-10">
+                    <img src="./images/icon-separator.png" class="absolute inset-y-0 right-3 top-1/2 transform -translate-y-1/2">
+                </label>
+            </div>
+            
+            <div class="flex items-center justify-end">
+                <button class="w-[97px] bg-dark-purple border-b-2 border-dark-purple hover:bg-light-purple hover:border-light-purple text-white font-medium font-base py-2 pl-4 pr-3 rounded flex gap-1 mr-5">
+                    Filter
+                    <img class="self-center" src="./images/adjustments.png">
+                </button>
+                <select id="filters" class="w-[180px] bg-white border border-lightergrey-300 text-lightergrey text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5  font-medium font-base">
+                    <option value="asc-name">ASC Names</option>
+                    <option value="desc-name">DESC Names</option>
+                    <option value="asc-price">ASC Price</option>
+                    <option value="desc-price">DESC Price</option>
+                </select>
+            </div>
+        </div>
+    </div>   
+
+
+    <!-- CONTAINER 2 -->
+    <div class="flex flex-wrap gap-10 p-10 justify-center">
+
+        <!-- ROW 1-->
+        <!-- CARD 1 -->
+        <div class="shadow-2xl bg-color-white flex flex-col max-w-[290px] h-[400px]">
+            <img class="rounded-t-lg w-[290px] h-[200px]" src="./images/card-img.png">
+            <div class="flex-1 flex flex-col justify-between">
+                <div class="pt-[30px] px-[30px]">
+                    <div class="text-left">
+                        <h2 class="text-xl2 font-bold">Product Title</h2>
+                        <p class="text-lightgrey text-sm mt-2 font-normal">Product Category</p>
+                        <p class="text-md font-bold mt-2">0.000.00€ <span class="text-lightgrey line-through font-bold"> 0.000.00€</span></p>
+                    </div>
+                </div>
+                <button class="bg-dark-purple hover:bg-light-purple text-white px-4 py-2 rounded-b-lg text-base w-full font-medium">Add to cart</button>
+            </div>
+        </div>
+        
+
+        <!-- CARD 2 -->
+        <div class="shadow-2xl bg-color-white flex flex-col max-w-[290px] h-[400px]">
+            <img class="rounded-t-lg w-[290px] h-[200px]" src="./images/card-img.png">
+            <div class="flex-1 flex flex-col justify-between">
+                <div class="pt-[30px] px-[30px]">
+                    <div class="text-left">
+                        <h2 class="text-xl2 font-bold">Product Title</h2>
+                        <p class="text-lightgrey text-sm mt-2 font-normal">Product Category</p>
+                        <p class="text-md font-bold mt-2">0.000.00€ <span class="text-lightgrey line-through font-bold"> 0.000.00€</span></p>
+                    </div>
+                </div>
+                <button class="bg-dark-purple hover:bg-light-purple text-white px-4 py-2 rounded-b-lg text-base w-full font-medium">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="shadow-2xl bg-color-white flex flex-col max-w-[290px] h-[400px]">
+            <img class="rounded-t-lg w-[290px] h-[200px]" src="./images/card-img.png">
+            <div class="flex-1 flex flex-col justify-between">
+                <div class="pt-[30px] px-[30px]">
+                    <div class="text-left">
+                        <h2 class="text-xl2 font-bold">Product Title</h2>
+                        <p class="text-lightgrey text-sm mt-2 font-normal">Product Category</p>
+                        <p class="text-md font-bold mt-2">0.000.00€ <span class="text-lightgrey line-through font-bold"> 0.000.00€</span></p>
+                    </div>
+                </div>
+                <button class="bg-dark-purple hover:bg-light-purple text-white px-4 py-2 rounded-b-lg text-base w-full font-medium">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="shadow-2xl bg-color-white flex flex-col max-w-[290px] h-[400px]">
+            <img class="rounded-t-lg w-[290px] h-[200px]" src="./images/card-img.png">
+            <div class="flex-1 flex flex-col justify-between">
+                <div class="pt-[30px] px-[30px]">
+                    <div class="text-left">
+                        <h2 class="text-xl2 font-bold">Product Title</h2>
+                        <p class="text-lightgrey text-sm mt-2 font-normal">Product Category</p>
+                        <p class="text-md font-bold mt-2">0.000.00€ <span class="text-lightgrey line-through font-bold"> 0.000.00€</span></p>
+                    </div>
+                </div>
+                <button class="bg-dark-purple hover:bg-light-purple text-white px-4 py-2 rounded-b-lg text-base w-full font-medium">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- ROW 2-->
+        <!-- CARD 1 -->
+        <div class="shadow-2xl bg-color-white flex flex-col max-w-[290px] h-[400px]">
+            <img class="rounded-t-lg w-[290px] h-[200px]" src="./images/card-img.png">
+            <div class="flex-1 flex flex-col justify-between">
+                <div class="pt-[30px] px-[30px]">
+                    <div class="text-left">
+                        <h2 class="text-xl2 font-bold">Product Title</h2>
+                        <p class="text-lightgrey text-sm mt-2 font-normal">Product Category</p>
+                        <p class="text-md font-bold mt-2">0.000.00€ <span class="text-lightgrey line-through font-bold"> 0.000.00€</span></p>
+                    </div>
+                </div>
+                <button class="bg-dark-purple hover:bg-light-purple text-white px-4 py-2 rounded-b-lg text-base w-full font-medium">Add to cart</button>
+            </div>
+        </div>
+        
+
+        <!-- CARD 2 -->
+        <div class="shadow-2xl bg-color-white flex flex-col max-w-[290px] h-[400px]">
+            <img class="rounded-t-lg w-[290px] h-[200px]" src="./images/card-img.png">
+            <div class="flex-1 flex flex-col justify-between">
+                <div class="pt-[30px] px-[30px]">
+                    <div class="text-left">
+                        <h2 class="text-xl2 font-bold">Product Title</h2>
+                        <p class="text-lightgrey text-sm mt-2 font-normal">Product Category</p>
+                        <p class="text-md font-bold mt-2">0.000.00€ <span class="text-lightgrey line-through font-bold"> 0.000.00€</span></p>
+                    </div>
+                </div>
+                <button class="bg-dark-purple hover:bg-light-purple text-white px-4 py-2 rounded-b-lg text-base w-full font-medium">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="shadow-2xl bg-color-white flex flex-col max-w-[290px] h-[400px]">
+            <img class="rounded-t-lg w-[290px] h-[200px]" src="./images/card-img.png">
+            <div class="flex-1 flex flex-col justify-between">
+                <div class="pt-[30px] px-[30px]">
+                    <div class="text-left">
+                        <h2 class="text-xl2 font-bold">Product Title</h2>
+                        <p class="text-lightgrey text-sm mt-2 font-normal">Product Category</p>
+                        <p class="text-md font-bold mt-2">0.000.00€ <span class="text-lightgrey line-through font-bold"> 0.000.00€</span></p>
+                    </div>
+                </div>
+                <button class="bg-dark-purple hover:bg-light-purple text-white px-4 py-2 rounded-b-lg text-base w-full font-medium">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="shadow-2xl bg-color-white flex flex-col max-w-[290px] h-[400px]">
+            <img class="rounded-t-lg w-[290px] h-[200px]" src="./images/card-img.png">
+            <div class="flex-1 flex flex-col justify-between">
+                <div class="pt-[30px] px-[30px]">
+                    <div class="text-left">
+                        <h2 class="text-xl2 font-bold">Product Title</h2>
+                        <p class="text-lightgrey text-sm mt-2 font-normal">Product Category</p>
+                        <p class="text-md font-bold mt-2">0.000.00€ <span class="text-lightgrey line-through font-bold"> 0.000.00€</span></p>
+                    </div>
+                </div>
+                <button class="bg-dark-purple hover:bg-light-purple text-white px-4 py-2 rounded-b-lg text-base w-full font-medium">Add to cart</button>
+            </div>
+        </div>
+    </div> 
+
+    <div class="flex justify-center items-center py-10">
+        <button class="bg-transparent border-2 border-dark-purple text-dark-purple hover:border-light-purple hover:text-light-purple font-medium font-base py-2 pl-4 pr-3 rounded flex items-center gap-1 mr-5">
+            Load more
+            <img class="self-center" src="./images/refresh.png">
+        </button>  
+    </div>
+    
+
+</body>
+
+<!-- FOOTER -->
+<footer>
+    <div class="flex flex-wrap text-white bg-black p-10 justify-between">
+        <div class="flex flex-col items-center">
+            <img src="./images/logo-footer.png" />
+            <p class="font-normal text-md">© 2023 My Compagny</p>
+        </div>
+        <div class="gap-4">
+            <p class="text-footertitle font-medium">My Compagny</p>
+            <nav class="font-bold text-md">
+                <ul>
+                    <li>
+                        <a href="/privacy">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="/terms">Terms</a>
+                    </li>
+                    <li>
+                        <a href="/sitemap">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="/cookies">Cookies</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="gap-4">
+            <p class="text-footertitle font-medium">Support</p>
+            <nav class="font-bold text-md">
+                <ul>
+                    <li>
+                        <a href="/cancellation options">Cancellation options</a>
+                    </li>
+                    <li>
+                        <a href="/refunds">Refunds</a>
+                    </li>
+                    <li>
+                        <a href="/help-center">Help Center</a>
+                    <li>
+                        <a href="/contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="gap-4">
+            <p class="text-footertitle font-medium">Social</p>
+            <nav class="font-bold text-md">
+                <ul>
+                    <li class="inline">
+                        <a href="facebook.fr">Facebook</a>
+                    </li>
+                    <li class="inline">
+                        <a href="twitter.fr">Twitter</a>
+                    </li>
+                    <li class="inline">
+                        <a href="linkdin.fr">Linkdin</a>
+                    <li class="inline">
+                        <a href="google.plus.fr">Google +</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+
+</html>
+
